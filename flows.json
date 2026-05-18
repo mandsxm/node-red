@@ -1,0 +1,428 @@
+[
+    {
+        "id": "c657a90d922251f7",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "78f2621eb4e86455",
+        "type": "mqtt-broker",
+        "name": "AAA",
+        "broker": "broker.mqttdashboard.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9ee0b09062333680",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "4c87cce67490dcd1",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "05ce097160c8c6b9",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "9ee0b09062333680",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "4c87cce67490dcd1",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "0825af9bbc469d30",
+        "type": "ui-group",
+        "name": "CONTROLE DO ESP32",
+        "page": "05ce097160c8c6b9",
+        "width": 6,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "123f39af560fb9c4",
+        "type": "inject",
+        "z": "c657a90d922251f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "amanda/temp",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 320,
+        "y": 320,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "9e1e5a0f1a7d0376",
+        "type": "inject",
+        "z": "c657a90d922251f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "amanda/temp",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "b6925e57f02a9d53",
+        "type": "inject",
+        "z": "c657a90d922251f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "amanda/temp",
+        "payload": "servo90",
+        "payloadType": "str",
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "b9ef4742dca3dcdf",
+        "type": "inject",
+        "z": "c657a90d922251f7",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "amanda/temp",
+        "payload": "servo0",
+        "payloadType": "str",
+        "x": 300,
+        "y": 440,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "84a51e46781e5c7a",
+        "type": "mqtt out",
+        "z": "c657a90d922251f7",
+        "name": "",
+        "topic": "amanda/temp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "78f2621eb4e86455",
+        "x": 680,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f2cf9dfb0a10aa57",
+        "type": "ui-button",
+        "z": "c657a90d922251f7",
+        "group": "0825af9bbc469d30",
+        "name": "Ligar LED",
+        "label": "BOTÃO PARA ADICIONAR O LED",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "4df0b518b6197c53",
+        "type": "ui-button",
+        "z": "c657a90d922251f7",
+        "group": "0825af9bbc469d30",
+        "name": "Desligar LED",
+        "label": "BOTÃO PARA DESLIGAR O LED",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 330,
+        "y": 180,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "b09a233a796d20fe",
+        "type": "ui-button",
+        "z": "c657a90d922251f7",
+        "group": "0825af9bbc469d30",
+        "name": "Girar 90°",
+        "label": "GIRA O MOTOR A 90 GRAUS",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "ef5f6247c6fa4060",
+        "type": "ui-button",
+        "z": "c657a90d922251f7",
+        "group": "0825af9bbc469d30",
+        "name": "Girar 0°",
+        "label": "GIRA O MOTOR A 0 GRAUS",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "",
+        "textColor": "",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "84a51e46781e5c7a"
+            ]
+        ]
+    },
+    {
+        "id": "56172e4a64c0e4b1",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2"
+        }
+    }
+]
